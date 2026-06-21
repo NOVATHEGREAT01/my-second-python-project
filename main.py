@@ -4,15 +4,24 @@ class Courses():
         self.name = name
         self.score = score
 
-    def data(self):
-        self.name = input('name: ')
-        self.score = int(input('score: '))
+def data():
+    try:
+        course.name = str(input('name: '))
+        course.score = int(input('score: '))
 
-        print(f'{self.name} {self.score}')
+    except ValueError:
+        print('Invalid datatype \n name = "STRING" and score = "INTEGER"')
+
+    else:
+        print(course.name)
+        print(course.score)
+
 
 course = Courses(['MTH','PHY','CHM','STA','COS'],name = '',score = '')
 
-course.data()
+    
+
+data()
 
 
 
