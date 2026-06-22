@@ -8,19 +8,22 @@ class Courses():
     def __str__(self):
         return f'Hello {self.name}'
     
+course = Courses(['MTH','PHY','CHM','STA','COS'],name = '',score = '',grade = '')
+    
 def data():
     while True:
         try:
             course.name = str(input('name: '))
             if course.name == '':
-                data()
+                continue
             
             course.score = int(input('score: '))
             if course.score == '':
-                data()
+                continue
 
         except ValueError:
-            data()
+            print('enter valid data')
+            continue
 
         else:
             if course.score >= 70:
@@ -44,8 +47,6 @@ def data():
                 print(f'{course.name} your grade is {course.grade}')
 
         break
-
-course = Courses(['MTH','PHY','CHM','STA','COS'],name = '',score = '',grade = '')
 
 data()
 
