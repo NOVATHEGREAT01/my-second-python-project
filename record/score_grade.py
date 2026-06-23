@@ -1,4 +1,4 @@
-from student_class import student
+from record.student_class import student
 
 def score_grade():
     while True:
