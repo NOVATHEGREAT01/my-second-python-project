@@ -10,7 +10,6 @@ def scoregrade():
             student.score[3] = int(input('COS score: '))
             student.score[4] = int(input('GST score: '))
 
-            # validate each score is in 0-100
             for s in student.score:
                 if s < 0 or s > 100:
                     raise ValueError
@@ -19,17 +18,16 @@ def scoregrade():
             print('enter valid data')
             continue
         else:
-            # compute grade from average (single grade value)
-            avg = sum(student.score) / len(student.score)
-            if avg >= 70 and avg <= 100:
+            average = sum(student.score) / len(student.score)
+            if average >= 70 and average <= 100:
                 student.grade = 'A'
-            elif avg >= 60:
+            elif average >= 60:
                 student.grade = 'B'
-            elif avg >= 50:
+            elif average >= 50:
                 student.grade = 'C'
-            elif avg >= 40:
+            elif average >= 40:
                 student.grade = 'D'
-            elif avg >= 30:
+            elif average >= 30:
                 student.grade = 'E'
             else:
                 student.grade = 'F'
