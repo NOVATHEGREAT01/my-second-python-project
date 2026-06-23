@@ -1,6 +1,6 @@
-from record.student_class import student
+from record.classes import student
 
-def score_grade():
+def scoregrade():
     while True:
         try:
             student.score = int(input('score: '))
@@ -37,3 +37,7 @@ def score_grade():
                 print(student.grade)
 
         break
+
+score_grade = scoregrade()
+
+

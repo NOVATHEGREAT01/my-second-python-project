@@ -9,3 +9,6 @@ class Student():
         return f'Hello {self.name}'
     
 student = Student(['MTH','PHY','CHM','STA','COS'],name = '',score = '',grade = '')
+
+class EmptyError(Exception):
+    pass
