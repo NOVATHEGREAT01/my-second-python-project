@@ -3,7 +3,7 @@ from record.student import student
 def scoregrade():
     while True:
         try:
-            print('Enter the scores respectively')
+            print('Enter the scores respectively\n')
             student.score[0] = int(input('MTH score: '))
             student.score[1] = int(input('PHY score: '))
             student.score[2] = int(input('STA score: '))
@@ -36,8 +36,6 @@ def scoregrade():
                 student.grade = 'F'
 
             break
-
-
 
 score_grade = scoregrade()
 
