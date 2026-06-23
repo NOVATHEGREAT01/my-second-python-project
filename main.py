@@ -1,19 +1,10 @@
-class Student():
-    def __init__(self,courses,name,score,grade):
-        self.students = courses
-        self.name = name
-        self.score = score
-        self.grade = grade
-
-    def __str__(self):
-        return f'Hello {self.name}'
-    
-student = Student(['MTH','PHY','CHM','STA','COS'],name = '',score = '',grade = '')
+from records.student import student
     
 def data():
     while True:
         try:
             student.name = str(input('name: '))
+            print(student)
             if student.name == '':
                 continue
             
@@ -42,13 +33,19 @@ def data():
                 student.grade = 'D'
                 print(f'{student.name} your grade is {student.grade}')
 
-            elif student.score < 40:
+            elif student.score < 40 and student.score >= 30:
+                student.grade = 'E'
+                print(f'{student.name} your grade is {student.grade}')
+
+            elif student.score < 30:
                 student.grade = 'F'
                 print(f'{student.name} your grade is {student.grade}')
 
         break
 
 data()
+
+
 
 
 
