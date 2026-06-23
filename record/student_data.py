@@ -2,18 +2,25 @@ from record.student import student
 
 def data():
     while True:
-        name = input('Enter name: ').strip()
+        try:
+            student.name = input('Enter name: ')
+            student.name = student.name.upper()
 
-        if name == '':
+            # reject empty name
+            if student.name.strip() == '':
+                raise ValueError
+
+            # reject names containing digits
+            if any(ch.isdigit() for ch in student.name):
+                raise ValueError
+
+        except ValueError:
             print('enter name')
             continue
+        else:
+            print(f'WELCOME {student.name}\n')
+            break
 
-        if any(ch.isdigit() for ch in name):
-            print('enter name: name must not contain numbers')
-            continue
-
-        student.name = name.upper()
-        print(f'WELCOME {student.name}\n')
-        break
+    return student.name
 
 student_data = data()
