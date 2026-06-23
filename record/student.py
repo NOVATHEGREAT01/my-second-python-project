@@ -5,4 +5,4 @@ class Student():
         self.score = score
         self.grade = grade
     
-student = Student(courses = ['MTH','PHY','STA','COS','GST'],name = '',score = [0,0,0,0,0],grade = '')
+student = Student(courses = ['MTH','PHY','STA','COS','GST'],name = '',score = [0,0,0,0,0],grade = ['','','','',''])
