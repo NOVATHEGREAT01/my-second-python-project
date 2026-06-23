@@ -1,6 +1,6 @@
-class Courses():
+class Student():
     def __init__(self,courses,name,score,grade):
-        self.courses = courses
+        self.students = courses
         self.name = name
         self.score = score
         self.grade = grade
@@ -8,17 +8,17 @@ class Courses():
     def __str__(self):
         return f'Hello {self.name}'
     
-course = Courses(['MTH','PHY','CHM','STA','COS'],name = '',score = '',grade = '')
+student = Student(['MTH','PHY','CHM','STA','COS'],name = '',score = '',grade = '')
     
 def data():
     while True:
         try:
-            course.name = str(input('name: '))
-            if course.name == '':
+            student.name = str(input('name: '))
+            if student.name == '':
                 continue
             
-            course.score = int(input('score: '))
-            if course.score == '':
+            student.score = int(input('score: '))
+            if student.score == '':
                 continue
 
         except ValueError:
@@ -26,25 +26,25 @@ def data():
             continue
 
         else:
-            if course.score >= 70:
-                course.grade = 'A'
-                print(f'{course.name} your grade is {course.grade}')
+            if student.score >= 70:
+                student.grade = 'A'
+                print(f'{student.name} your grade is {student.grade}')
 
-            elif course.score < 70 and course.score >= 60:
-                course.grade = 'B'
-                print(f'{course.name} your grade is {course.grade}')
+            elif student.score < 70 and student.score >= 60:
+                student.grade = 'B'
+                print(f'{student.name} your grade is {student.grade}')
 
-            elif course.score < 60 and course.score >= 50:
-                course.grade = 'c'
-                print(f'{course.name} your grade is {course.grade}')
+            elif student.score < 60 and student.score >= 50:
+                student.grade = 'c'
+                print(f'{student.name} your grade is {student.grade}')
 
-            elif course.score < 50 and course.score >= 40:
-                course.grade = 'D'
-                print(f'{course.name} your grade is {course.grade}')
+            elif student.score < 50 and student.score >= 40:
+                student.grade = 'D'
+                print(f'{student.name} your grade is {student.grade}')
 
-            elif course.score < 40:
-                course.grade = 'F'
-                print(f'{course.name} your grade is {course.grade}')
+            elif student.score < 40:
+                student.grade = 'F'
+                print(f'{student.name} your grade is {student.grade}')
 
         break
 
