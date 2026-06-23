@@ -1,42 +1,43 @@
-from record.classes import student
+from record.student import student
 
 def scoregrade():
     while True:
         try:
-            student.score = int(input('score: '))
+            print('Enter the scores respectively')
+            student.score[0] = int(input('MTH score: '))
+            student.score[1] = int(input('PHY score: '))
+            student.score[2] = int(input('STA score: '))
+            student.score[3] = int(input('COS score: '))
+            student.score[4] = int(input('GST score: '))
             if student.score == '':
-                continue
+                raise ValueError
 
         except ValueError:
             print('enter valid data')
             continue
 
         else:
-            if student.score >= 70:
+            if student.score[0 or 1 or 2 or 3 or 4] >= 70 and student.score[0 or 1 or 2 or 3 or 4] <= 100:
                 student.grade = 'A'
-                print(student.grade)
 
-            elif student.score < 70 and student.score >= 60:
+            elif student.score[0 or 1 or 2 or 3 or 4] < 70 and student.score[0 or 1 or 2 or 3 or 4] >= 60:
                 student.grade = 'B'
-                print(student.grade)
 
-            elif student.score < 60 and student.score >= 50:
+            elif student.score[0 or 1 or 2 or 3 or 4] < 60 and student.score[0 or 1 or 2 or 3 or 4] >= 50:
                 student.grade = 'c'
-                print(student.grade)
 
-            elif student.score < 50 and student.score >= 40:
+            elif student.score[0 or 1 or 2 or 3 or 4] < 50 and student.score[0 or 1 or 2 or 3 or 4] >= 40:
                 student.grade = 'D'
-                print(student.grade)
 
-            elif student.score < 40 and student.score >= 30:
+            elif student.score[0 or 1 or 2 or 3 or 4] < 40 and student.score[0 or 1 or 2 or 3 or 4] >= 30:
                 student.grade = 'E'
-                print(student.grade)
 
-            elif student.score < 30:
+            elif student.score[0 or 1 or 2 or 3 or 4] < 30 :
                 student.grade = 'F'
-                print(student.grade)
 
-        break
+            break
+
+
 
 score_grade = scoregrade()
 
