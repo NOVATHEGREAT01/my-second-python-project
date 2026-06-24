@@ -11,6 +11,6 @@ def student_record():
     print(f'{student.courses[2]} = {student.score[2]}({student.grade})')
     print(f'{student.courses[3]} = {student.score[3]}({student.grade})')
     print(f'{student.courses[4]} = {student.score[4]}({student.grade})\n')
-    print(f'Your average is {sum(student.score)/len(student.score)}')
+    print(f'Your average is {sum(student.score)/len(student.score)}/100')
 
 student_record()
